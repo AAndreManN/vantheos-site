@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vantheos Design System - Enhanced
+   Brand: High-autonomy, high-precision AI systems
+   Tone: Intelligent, Minimal, Confident, Technical, Premium
+*/
+
+@layer base {
+  :root {
+    /* Primary: Deep Steel Blue - richer, more saturated */
+    --primary: 207 55% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Primary Light: Vibrant accent blue */
+    --primary-light: 207 70% 55%;
+    
+    /* Background: Clean warm white */
+    --background: 40 30% 97%;
+    --foreground: 220 20% 15%;
+    
+    /* Cards: Pure white for contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+    
+    /* Secondary: Cool light gray */
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 20% 15%;
+    
+    /* Muted */
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+    
+    /* Accent: Bright signal blue for highlights */
+    --accent: 205 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 207 55% 45%;
+    
+    --radius: 0.75rem;
+    
+    /* Navy: Rich deep blue-black for dramatic sections */
+    --navy: 220 40% 8%;
+    --navy-foreground: 40 30% 97%;
+    
+    /* Slate for text */
+    --slate: 220 20% 15%;
+    
+    /* Copper accent for warm contrast */
+    --copper: 25 70% 50%;
+    --copper-light: 25 65% 60%;
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 40 30% 97%;
+    
+    --card: 220 35% 12%;
+    --card-foreground: 40 30% 97%;
+    
+    --popover: 220 35% 12%;
+    --popover-foreground: 40 30% 97%;
+    
+    --primary: 207 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 40 30% 97%;
+    
+    --muted: 220 30% 18%;
+    --muted-foreground: 220 15% 65%;
+    
+    --accent: 205 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 207 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+  
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .navy-section {
+    @apply bg-navy text-navy-foreground;
+  }
+  
+  /* Glass effect for cards */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  }
+  
+  /* Subtle glow effect */
+  .glow-primary {
+    box-shadow: 0 0 60px -15px hsl(var(--primary) / 0.4);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 60px -15px hsl(var(--accent) / 0.4);
+  }
+  
+  /* Interactive card */
+  .interactive-card {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  .interactive-card:hover {
+    @apply -translate-y-2 shadow-2xl;
+  }
+  
+  /* Magnetic button effect */
+  .magnetic-btn {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .magnetic-btn::before {
+    content: '';
+    @apply absolute inset-0 bg-white/20 translate-y-full transition-transform duration-300;
+  }
+  
+  .magnetic-btn:hover::before {
+    @apply translate-y-0;
+  }
+  
+  /* Underline animation */
+  .link-underline {
+    @apply relative;
+  }
+  
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-current origin-left scale-x-0 transition-transform duration-300;
+  }
+  
+  .link-underline:hover::after {
+    @apply scale-x-100;
+  }
+  
+  /* Icon hover */
+  .icon-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .icon-hover:hover {
+    @apply scale-110 rotate-3;
+  }
+  
+  /* Shimmer effect */
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
+    animation: shimmer 2s infinite;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+  
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+  
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  
+  /* Hover transforms */
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-1;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 20px 40px -15px hsl(var(--navy) / 0.25);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
