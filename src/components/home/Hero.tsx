@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { homeContent } from "@/content/pages/home";
 export const Hero = () => {
   return <section className="relative min-h-[60vh] bg-background overflow-hidden flex flex-col items-center justify-center py-16 px-4">
       {/* Subtle background elements */}
@@ -11,29 +12,29 @@ export const Hero = () => {
       <div className="max-w-4xl text-center relative z-10">
         {/* Main Headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 opacity-0 animate-fade-up text-foreground">
-          Operational{" "}
-          <span className="bg-gradient-to-r from-primary to-copper bg-clip-text text-transparent">Autonomy</span>
+          {homeContent.hero.headingPrefix}{" "}
+          <span className="bg-gradient-to-r from-primary to-copper bg-clip-text text-transparent">{homeContent.hero.headingHighlight}</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-6 opacity-0 animate-fade-up stagger-1">AI agents that execute, answer, and operate—24/7</p>
+        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-6 opacity-0 animate-fade-up stagger-1">{homeContent.hero.subheadline}</p>
 
         {/* Description */}
         <p className="text-lg text-muted-foreground/70 max-w-2xl mx-auto mb-10 opacity-0 animate-fade-up stagger-2">
-          Vantheos delivers always-on AI agents that autonomously execute business operations—from answering calls to handling workflows—so work gets done without waiting on people.
+          {homeContent.hero.description}
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up stagger-3">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-semibold shadow-xl shadow-navy/20 hover:shadow-2xl hover:shadow-navy/30 hover:-translate-y-1 transition-all duration-300">
-            <a href="https://calendly.com/andre-mattera/discovery-automation-and-increased-profit" target="_blank" rel="noopener noreferrer">
-              Book a Discovery Call
+            <a href={homeContent.hero.primaryCta.href} target="_blank" rel="noopener noreferrer">
+              {homeContent.hero.primaryCta.label}
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
           <Button asChild size="lg" className="bg-navy text-white hover:bg-navy/90 px-8 py-6 text-base font-semibold shadow-lg shadow-navy/20 hover:shadow-2xl hover:shadow-navy/30 hover:-translate-y-1 transition-all duration-300">
-            <a href="/services">
-              Explore Services
+            <a href={homeContent.hero.secondaryCta.href}>
+              {homeContent.hero.secondaryCta.label}
             </a>
           </Button>
         </div>

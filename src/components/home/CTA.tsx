@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { homeContent } from "@/content/pages/home";
 
 export const CTA = () => {
   return (
@@ -31,10 +32,10 @@ export const CTA = () => {
             
             <div className="relative z-10">
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Ready for Operational Autonomy?
+                {homeContent.cta.title}
               </h2>
               <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10">
-                Discover how Vantheos can transform your business operations with intelligent agents that execute without supervision.
+                {homeContent.cta.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -43,11 +44,11 @@ export const CTA = () => {
                   className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-base font-semibold shadow-xl shadow-navy/20 hover:shadow-2xl hover:shadow-navy/30 hover:-translate-y-1 transition-all duration-300"
                 >
                   <a
-                    href="https://calendly.com/andre-mattera/discovery-automation-and-increased-profit"
+                    href={homeContent.cta.primaryButton.href}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Schedule a Discovery Call
+                    {homeContent.cta.primaryButton.label}
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
@@ -56,8 +57,8 @@ export const CTA = () => {
                   size="lg"
                   className="bg-navy text-white hover:bg-navy/90 px-8 py-6 text-base hover:-translate-y-1 transition-all duration-300"
                 >
-                  <a href="/contact">
-                    Contact Us
+                  <a href={homeContent.cta.secondaryButton.href}>
+                    {homeContent.cta.secondaryButton.label}
                   </a>
                 </Button>
               </div>
