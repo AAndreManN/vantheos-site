@@ -14,14 +14,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Layout } from "@/components/layout";
 import { siteContact, siteCtas } from "@/content/site";
-
-const services = [
-  "AI Consulting",
-  "Automation Solutions",
-  "Voice Agents",
-  "Process Re-engineering",
-  "General Inquiry",
-];
+import { contactPageContent } from "@/content/pages/contact";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -43,8 +36,8 @@ const Contact = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: "Message sent",
-      description: "We'll be in touch within 24 hours.",
+      title: contactPageContent.toast.title,
+      description: contactPageContent.toast.description,
     });
 
     setFormData({
@@ -70,14 +63,13 @@ const Contact = () => {
 
         <div className="max-w-2xl text-center relative z-10">
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Let's Talk{" "}
+            {contactPageContent.hero.titlePrefix}{" "}
             <span className="bg-gradient-to-r from-primary to-copper bg-clip-text text-transparent">
-              Operations
+              {contactPageContent.hero.titleHighlight}
             </span>
           </h1>
           <p className="text-xl text-muted-foreground">
-            Ready to explore operational autonomy? Get in touch or schedule a
-            discovery call.
+            {contactPageContent.hero.description}
           </p>
         </div>
 
@@ -92,15 +84,15 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div className="bg-card rounded-2xl p-8 lg:p-10 border border-border/50 shadow-lg">
-              <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
+              <h2 className="text-2xl font-bold mb-6">{contactPageContent.form.title}</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">{contactPageContent.form.fields.name.label}</Label>
                     <Input
                       id="name"
-                      placeholder="Your name"
+                      placeholder={contactPageContent.form.fields.name.placeholder}
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -110,11 +102,11 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">{contactPageContent.form.fields.email.label}</Label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="you@company.com"
+                      placeholder={contactPageContent.form.fields.email.placeholder}
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
@@ -126,11 +118,11 @@ const Contact = () => {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
+                    <Label htmlFor="phone">{contactPageContent.form.fields.phone.label}</Label>
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="(555) 123-4567"
+                      placeholder={contactPageContent.form.fields.phone.placeholder}
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
@@ -139,10 +131,10 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
+                    <Label htmlFor="company">{contactPageContent.form.fields.company.label}</Label>
                     <Input
                       id="company"
-                      placeholder="Company name"
+                      placeholder={contactPageContent.form.fields.company.placeholder}
                       value={formData.company}
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
@@ -152,7 +144,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="service">Service Interest</Label>
+                  <Label htmlFor="service">{contactPageContent.form.fields.service.label}</Label>
                   <Select
                     value={formData.service}
                     onValueChange={(value) =>
@@ -160,10 +152,10 @@ const Contact = () => {
                     }
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder={contactPageContent.form.fields.service.placeholder} />
                     </SelectTrigger>
                     <SelectContent>
-                      {services.map((service) => (
+                      {contactPageContent.form.fields.service.options.map((service) => (
                         <SelectItem key={service} value={service}>
                           {service}
                         </SelectItem>
@@ -173,11 +165,11 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message">{contactPageContent.form.fields.message.label}</Label>
                   <Textarea
                     id="message"
                     rows={5}
-                    placeholder="Tell us about your operational challenges..."
+                    placeholder={contactPageContent.form.fields.message.placeholder}
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -192,9 +184,9 @@ const Contact = () => {
                   className="w-full bg-primary hover:bg-primary/90"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : (
+                  {isSubmitting ? contactPageContent.form.submittingLabel : (
                     <>
-                      Send Message
+                      {contactPageContent.form.submitLabel}
                       <Send className="ml-2 h-5 w-5" />
                     </>
                   )}
@@ -210,12 +202,11 @@ const Contact = () => {
                   <div className="p-3 bg-white/20 rounded-lg">
                     <Calendar className="w-6 h-6" />
                   </div>
-                  <h2 className="text-2xl font-bold">Book a Discovery Call</h2>
+                  <h2 className="text-2xl font-bold">{contactPageContent.callout.title}</h2>
                 </div>
 
                 <p className="text-white/80 mb-8">
-                  Schedule a 30-minute discovery call to discuss your operational
-                  challenges.
+                  {contactPageContent.callout.description}
                 </p>
 
                 <Button
@@ -237,7 +228,7 @@ const Contact = () => {
               {/* Contact Info */}
               <div className="bg-card rounded-2xl p-8 lg:p-10 border border-border/50">
                 <h2 className="text-2xl font-bold mb-6">
-                  Other Ways to Reach Us
+                  {contactPageContent.contactInfo.title}
                 </h2>
 
                 <div className="space-y-6">
@@ -247,7 +238,7 @@ const Contact = () => {
                       <Mail className="w-5 h-5 text-copper" />
                     </div>
                     <div>
-                      <p className="font-medium mb-1">Email</p>
+                      <p className="font-medium mb-1">{contactPageContent.contactInfo.emailLabel}</p>
                       <a
                         href={siteContact.emailHref}
                         className="text-muted-foreground hover:text-primary"
@@ -263,7 +254,7 @@ const Contact = () => {
                       <Phone className="w-5 h-5 text-copper" />
                     </div>
                     <div>
-                      <p className="font-medium mb-1">Phone</p>
+                      <p className="font-medium mb-1">{contactPageContent.contactInfo.phoneLabel}</p>
                       <a
                         href={siteContact.phoneHref}
                         className="text-muted-foreground hover:text-primary"
