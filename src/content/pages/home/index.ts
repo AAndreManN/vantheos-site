@@ -1,3 +1,5 @@
+import { siteCtas } from "@/content/site";
+
 export const homeContent = {
   hero: {
     headingPrefix: "Operational",
@@ -6,9 +8,9 @@ export const homeContent = {
     description:
       "Vantheos delivers always-on AI agents that autonomously execute business operations—from answering calls to handling workflows—so work gets done without waiting on people.",
     primaryCta: {
-      label: "Book a Discovery Call",
-      href: "https://calendly.com/andre-mattera/discovery-automation-and-increased-profit",
-      external: true,
+      label: siteCtas.bookDiscoveryCall.label,
+      href: siteCtas.bookDiscoveryCall.href,
+      external: siteCtas.bookDiscoveryCall.external,
     },
     secondaryCta: {
       label: "Explore Services",
@@ -88,9 +90,9 @@ export const homeContent = {
     description:
       "Discover how Vantheos can transform your business operations with intelligent agents that execute without supervision.",
     primaryButton: {
-      label: "Schedule a Discovery Call",
-      href: "https://calendly.com/andre-mattera/discovery-automation-and-increased-profit",
-      external: true,
+      label: siteCtas.scheduleDiscoveryCall.label,
+      href: siteCtas.scheduleDiscoveryCall.href,
+      external: siteCtas.scheduleDiscoveryCall.external,
     },
     secondaryButton: {
       label: "Contact Us",

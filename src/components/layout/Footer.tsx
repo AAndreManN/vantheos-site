@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/vantheos-logo.png";
+import { siteCtas, siteLegalLinks, siteNavLinks } from "@/content/site";
 
 export const Footer = () => {
   return (
@@ -22,26 +23,13 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-white/80">Navigation</h4>
             <ul className="space-y-3">
-              <li>
-                <Link to="/" className="text-white/50 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-white/50 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-white/50 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-white/50 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
+              {siteNavLinks.map((link) => (
+                <li key={link.href}>
+                  <Link to={link.href} className="text-white/50 hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -51,17 +39,17 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://calendly.com/andre-mattera/discovery-automation-and-increased-profit"
+                  href={siteCtas.bookCall.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/50 hover:text-white transition-colors"
                 >
-                  Book a Call
+                  {siteCtas.bookCall.label}
                 </a>
               </li>
               <li>
-                <Link to="/contact" className="text-white/50 hover:text-white transition-colors">
-                  Contact Us
+                <Link to={siteCtas.contactUs.href} className="text-white/50 hover:text-white transition-colors">
+                  {siteCtas.contactUs.label}
                 </Link>
               </li>
             </ul>
@@ -73,12 +61,11 @@ export const Footer = () => {
             © {new Date().getFullYear()} Vantheos. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/privacy-policy" className="text-white/30 hover:text-white/60 text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-of-service" className="text-white/30 hover:text-white/60 text-sm transition-colors">
-              Terms of Service
-            </Link>
+            {siteLegalLinks.map((link) => (
+              <Link key={link.href} to={link.href} className="text-white/30 hover:text-white/60 text-sm transition-colors">
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

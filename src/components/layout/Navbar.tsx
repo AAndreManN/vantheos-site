@@ -3,13 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/vantheos-logo.png";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+import { siteCtas, siteNavLinks } from "@/content/site";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +46,7 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {siteNavLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
@@ -72,11 +66,11 @@ export const Navbar = () => {
               className="bg-navy text-white hover:bg-navy/90"
             >
               <a
-                href="https://calendly.com/andre-mattera/discovery-automation-and-increased-profit"
+                href={siteCtas.bookCall.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book a Call
+                {siteCtas.bookCall.label}
               </a>
             </Button>
           </div>
@@ -97,7 +91,7 @@ export const Navbar = () => {
             isLight ? "border-border bg-background" : "border-white/10 bg-navy"
           }`}>
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
+              {siteNavLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
@@ -118,11 +112,11 @@ export const Navbar = () => {
                 className="mt-4 bg-navy text-white hover:bg-navy/90"
               >
                 <a
-                  href="https://calendly.com/andre-mattera/discovery-automation-and-increased-profit"
+                  href={siteCtas.bookCall.href}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Book a Call
+                  {siteCtas.bookCall.label}
                 </a>
               </Button>
             </div>

@@ -1,6 +1,7 @@
 import { ArrowRight, Target, Eye, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout";
+import { siteCtas } from "@/content/site";
 const values = [
   {
     icon: Target,
@@ -113,11 +114,11 @@ const About = () => {
               </p>
               <Button asChild size="lg" className="bg-white text-navy hover:bg-white/90">
                 <a
-                  href="https://calendly.com/andre-mattera/discovery-automation-and-increased-profit"
+                  href={siteCtas.workWithUs.href}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Work With Us
+                  {siteCtas.workWithUs.label}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Layout } from "@/components/layout";
+import { siteContact, siteCtas } from "@/content/site";
 
 const services = [
   "AI Consulting",
@@ -223,11 +224,11 @@ const Contact = () => {
                   className="w-full bg-white text-primary hover:bg-white/90 font-semibold"
                 >
                   <a
-                    href="https://calendly.com/andre-mattera/discovery-automation-and-increased-profit"
+                    href={siteCtas.scheduleNow.href}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Schedule Now
+                    {siteCtas.scheduleNow.label}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
@@ -248,10 +249,10 @@ const Contact = () => {
                     <div>
                       <p className="font-medium mb-1">Email</p>
                       <a
-                        href="mailto:hello@vantheos.com"
+                        href={siteContact.emailHref}
                         className="text-muted-foreground hover:text-primary"
                       >
-                        hello@vantheos.com
+                        {siteContact.email}
                       </a>
                     </div>
                   </div>
@@ -264,10 +265,10 @@ const Contact = () => {
                     <div>
                       <p className="font-medium mb-1">Phone</p>
                       <a
-                        href="tel:+12895529686"
+                        href={siteContact.phoneHref}
                         className="text-muted-foreground hover:text-primary"
                       >
-                        (289) 552-9686
+                        {siteContact.phoneDisplay}
                       </a>
                     </div>
                   </div>
