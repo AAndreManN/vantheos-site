@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/pages/home";
 export const Hero = () => {
@@ -33,9 +34,9 @@ export const Hero = () => {
             </a>
           </Button>
           <Button asChild size="lg" className="bg-navy text-white hover:bg-navy/90 px-8 py-6 text-base font-semibold shadow-lg shadow-navy/20 hover:shadow-2xl hover:shadow-navy/30 hover:-translate-y-1 transition-all duration-300">
-            <a href={homeContent.hero.secondaryCta.href}>
+            <Link to={homeContent.hero.secondaryCta.href}>
               {homeContent.hero.secondaryCta.label}
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
