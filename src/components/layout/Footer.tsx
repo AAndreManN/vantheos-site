@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/vantheos-logo.svg";
+import logoLight from "@/assets/vantheos-logo-light.svg";
 import { siteCtas, siteLegalLinks, siteNavLinks } from "@/content/site";
 
 export const Footer = () => {
@@ -10,9 +10,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="inline-block mb-6 group">
-              <div className="bg-white rounded-lg p-2 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-navy/30">
-                <img src={logo} alt="Vantheos" className="h-10 w-auto" />
-              </div>
+              <img src={logoLight} alt="Vantheos" className="h-10 w-auto transition-all duration-300 group-hover:scale-105" />
             </Link>
             <p className="text-white/50 max-w-md leading-relaxed">
               Practical AI that captures more leads, converts more calls, and keeps your customers coming back.
