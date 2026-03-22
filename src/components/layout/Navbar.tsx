@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/vantheos-logo.svg";
+import logoDark from "@/assets/vantheos-logo-dark.svg";
+import logoLight from "@/assets/vantheos-logo-light.svg";
 import { siteCtas, siteNavLinks } from "@/content/site";
 
 export const Navbar = () => {
@@ -27,21 +28,19 @@ export const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isLight 
-        ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" 
-        : "bg-[#598BAF]/95 backdrop-blur-md"
+      isLight
+        ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+        : "bg-navy/95 backdrop-blur-md"
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className={`rounded-lg p-1 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg ${!isLight ? "bg-white group-hover:shadow-white/20" : "group-hover:shadow-primary/20"}`}>
-              <img 
-                src={logo} 
-                alt="Vantheos" 
-                className="h-10 w-auto transition-all"
-              />
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img
+              src={isLight ? logoDark : logoLight}
+              alt="Vantheos"
+              className="h-10 w-auto transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
