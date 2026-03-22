@@ -1,8 +1,8 @@
 export const contactPageContent = {
   hero: {
     titlePrefix: "Let's Talk",
-    titleHighlight: "Operations",
-    description: "Ready to explore operational autonomy? Get in touch or schedule a discovery call.",
+    titleHighlight: "Growth",
+    description: "Ready to capture more leads, convert more calls, and keep more customers? Let's find out where to start.",
   },
   form: {
     title: "Send a Message",
@@ -27,10 +27,10 @@ export const contactPageContent = {
         label: "Service Interest",
         placeholder: "Select a service",
         options: [
-          "AI Consulting",
-          "Automation Solutions",
-          "Voice Agents",
-          "Process Re-engineering",
+          "Voice AI",
+          "Retention & Loyalty Programs",
+          "Lead Generation & Ads",
+          "AI & Automation Consulting",
           "General Inquiry",
         ],
       },

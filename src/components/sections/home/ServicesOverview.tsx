@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { Brain, Workflow, Mic, Cog, ArrowRight } from "lucide-react";
+import { Brain, Mic, Target, Users, ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { homeContent } from "@/content/pages/home";
 
 const serviceIcons = {
   brain: Brain,
-  workflow: Workflow,
   mic: Mic,
-  cog: Cog,
+  target: Target,
+  users: Users,
 } as const;
 
 export const ServicesOverview = () => {

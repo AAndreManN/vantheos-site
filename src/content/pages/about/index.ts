@@ -1,17 +1,17 @@
 export const aboutPageContent = {
   hero: {
-    titlePrefix: "Building the Future of",
-    titleHighlight: "Autonomous Operations",
+    titlePrefix: "AI-Augmented Operations &",
+    titleHighlight: "Lead Generation",
     paragraphOne:
-      "Vantheos creates autonomous operations built around intelligent agents that act, execute, and follow through.",
+      "Vantheos helps businesses increase operational capacity and generate qualified opportunities using practical, AI-augmented capabilities.",
     paragraphTwo:
-      "Designed for real-world business needs—like making and answering calls, coordinating workflows, and handling tasks around the clock—Vantheos replaces wait times, dropped calls, and manual bottlenecks with continuous, reliable, hands-off execution.",
+      "We design and implement AI systems that enhance how your business attracts new customers, handles calls, and keeps existing customers coming back — delivered in days or weeks, not months.",
   },
   mission: {
     eyebrow: "Our Mission",
-    title: "Operational Autonomy for Every Business",
+    title: "More Revenue. Less Left on the Table.",
     description:
-      "We believe businesses deserve systems that work as hard as they do—around the clock, without pause. Our mission is to deliver intelligent agents that transform how organizations operate, freeing teams to focus on what matters most.",
+      "Too many businesses are quietly losing revenue through missed calls, lapsed customers, and inconsistent lead flow. Our mission is to build the practical AI systems that capture what's slipping through — so business owners can focus on running their business, not chasing it.",
   },
   valuesSection: {
     eyebrow: "Our Values",
@@ -21,37 +21,38 @@ export const aboutPageContent = {
         iconKey: "target",
         title: "Precision",
         description:
-          "We build systems that execute with accuracy. No guesswork, no approximations—only precise, reliable outcomes.",
+          "We build systems that execute with accuracy. No guesswork, no wasted budget — only targeted, reliable outcomes.",
       },
       {
         iconKey: "eye",
-        title: "Autonomy",
+        title: "Results First",
         description:
-          "Our solutions operate independently, understanding context and taking action without constant supervision.",
+          "We measure success by the revenue and opportunities our systems create, not the complexity of what we build.",
       },
       {
         iconKey: "sparkles",
-        title: "Intelligence",
-        description: "We leverage cutting-edge AI to create systems that adapt, learn, and continuously improve.",
+        title: "Practical Intelligence",
+        description:
+          "We apply AI where it creates real business value — not for the sake of technology, but for the outcomes it delivers.",
       },
     ],
   },
   approach: {
     eyebrow: "Our Approach",
-    title: "Systems, Not Scripts",
+    title: "Practical AI, Fast Implementation",
     paragraphOne:
-      "Unlike chatbots or one-off automations, Vantheos agents operate independently, understand context, and take action.",
+      "We don't believe in months-long engagements or AI for the sake of AI. We identify where your business is losing revenue and build targeted solutions that fix it — fast.",
     paragraphTwo:
-      "We speak like systems, not marketing. We prefer strong verbs: process, orchestrate, execute, verify, adapt, interpret. This approach reflects in everything we build—direct, declarative, precise.",
+      "Whether that's a voice AI that answers calls around the clock, a reactivation campaign that wins back lapsed customers, or a lead gen system that fills your pipeline — we focus on what moves the needle, and we get it running quickly.",
     quotes: [
-      "\"Autonomous systems that execute with precision.\"",
-      "\"Operational intelligence for real-world workflows.\"",
-      "\"Agents that think, act, and deliver outcomes.\"",
+      "\"Practical AI that delivers real business results.\"",
+      "\"Implemented in days or weeks — not months.\"",
+      "\"More leads, more calls converted, more customers retained.\"",
     ],
   },
   ctaSection: {
-    title: "Let's Build Something Intelligent",
-    description: "Ready to explore how autonomous operations can transform your business?",
+    title: "Let's Find Your Revenue Leaks",
+    description: "Book a discovery call and we'll identify exactly where your business is losing leads, calls, and customers.",
     buttonLabel: "Get in Touch",
     buttonHref: "/contact",
   },

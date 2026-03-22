@@ -15,7 +15,7 @@ export const Footer = () => {
               </div>
             </Link>
             <p className="text-white/50 max-w-md leading-relaxed">
-              Autonomous systems that execute with precision. Operational intelligence for real-world workflows.
+              Practical AI that captures more leads, converts more calls, and keeps your customers coming back.
             </p>
           </div>
 

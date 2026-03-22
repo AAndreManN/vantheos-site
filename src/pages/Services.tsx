@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Workflow, Mic, Cog, CheckCircle } from "lucide-react";
+import { ArrowRight, Brain, Mic, Target, Users, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout";
 import { siteCtas } from "@/content/site";
@@ -6,9 +6,9 @@ import { servicesPageContent } from "@/content/pages/services";
 
 const serviceIcons = {
   brain: Brain,
-  workflow: Workflow,
   mic: Mic,
-  cog: Cog,
+  target: Target,
+  users: Users,
 } as const;
 const Services = () => {
   return (
@@ -45,7 +45,8 @@ const Services = () => {
             return (
               <div
                 key={service.title}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+                id={service.id}
+                className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-24 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
               >
                 {/* Content Side */}
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
