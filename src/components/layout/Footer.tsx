@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/vantheos-logo.png";
+import logo from "@/assets/vantheos-logo.svg";
 import { siteCtas, siteLegalLinks, siteNavLinks } from "@/content/site";
 
 export const Footer = () => {
