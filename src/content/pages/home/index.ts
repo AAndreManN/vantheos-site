@@ -2,11 +2,11 @@ import { siteCtas } from "@/content/site";
 
 export const homeContent = {
   hero: {
-    headingPrefix: "Operational",
-    headingHighlight: "Autonomy",
-    subheadline: "AI agents that execute, answer, and operate—24/7",
+    headingPrefix: "Stop Losing Revenue —",
+    headingHighlight: "You've Earned It",
+    subheadline: "Vantheos uses practical AI to capture more leads, convert more calls, and keep your customers coming back.",
     description:
-      "Vantheos delivers always-on AI agents that autonomously execute business operations—from answering calls to handling workflows—so work gets done without waiting on people.",
+      "From first contact to long-term loyalty — implemented in days or weeks, not months.",
     primaryCta: {
       label: siteCtas.bookDiscoveryCall.label,
       href: siteCtas.bookDiscoveryCall.href,
@@ -19,33 +19,33 @@ export const homeContent = {
   },
   servicesOverview: {
     eyebrow: "What We Do",
-    title: "Intelligent Systems That Execute",
+    title: "Practical AI That Drives Real Results",
     description:
-      "Agents that think, act, and deliver outcomes. No wait times, no dropped calls, no manual bottlenecks.",
+      "We build and manage the systems that attract new customers, convert more calls, and keep your existing customers coming back.",
     items: [
       {
-        iconKey: "brain",
-        title: "AI Consulting",
-        description:
-          "Strategic guidance for implementing intelligent systems that align with your business objectives.",
-      },
-      {
-        iconKey: "workflow",
-        title: "Automation Solutions",
-        description:
-          "End-to-end workflow automation that eliminates bottlenecks and scales operations effortlessly.",
-      },
-      {
         iconKey: "mic",
-        title: "Voice Agents",
+        title: "Voice AI",
         description:
-          "Intelligent voice agents that make and answer calls, handle inquiries, and execute tasks around the clock.",
+          "AI-powered inbound reception and outbound calling — available 24/7 so you never miss a lead or a booking.",
       },
       {
-        iconKey: "cog",
-        title: "Process Re-engineering",
+        iconKey: "users",
+        title: "Retention & Loyalty Programs",
         description:
-          "Transform existing workflows into autonomous systems that operate with precision.",
+          "Reactivate lapsed customers, automate rebooking reminders, manage reviews, and build loyalty programs that keep customers coming back.",
+      },
+      {
+        iconKey: "target",
+        title: "Lead Generation & Ads",
+        description:
+          "Targeted ad campaigns that consistently generate qualified leads and new customer appointments without wasting budget.",
+      },
+      {
+        iconKey: "brain",
+        title: "AI & Automation Consulting",
+        description:
+          "Practical AI strategy and workflow automation that eliminates bottlenecks and scales your operations — implemented in days or weeks, not months.",
       },
     ],
     cta: {
@@ -55,9 +55,9 @@ export const homeContent = {
   },
   benefits: {
     eyebrow: "Why Vantheos",
-    title: "True Operational Autonomy",
+    title: "AI-Augmented Growth, Without the Complexity",
     description:
-      "Unlike chatbots or one-off automations, Vantheos agents operate independently, understand context, and follow through.",
+      "Practical AI that works alongside your business — not a massive project, not a long wait. Real results, fast.",
     items: [
       {
         iconKey: "clock",
@@ -86,9 +86,9 @@ export const homeContent = {
     ],
   },
   cta: {
-    title: "Ready for Operational Autonomy?",
+    title: "Stop Losing Revenue You've Already Earned",
     description:
-      "Discover how Vantheos can transform your business operations with intelligent agents that execute without supervision.",
+      "Let's identify exactly where you're losing leads, calls, and customers — and build the practical AI systems to fix it.",
     primaryButton: {
       label: siteCtas.scheduleDiscoveryCall.label,
       href: siteCtas.scheduleDiscoveryCall.href,
